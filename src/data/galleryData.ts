@@ -139,4 +139,14 @@ export const galleryCategories: GalleryCategory[] = [
       { id: "sci-4", imageSrc: "/sci4.jpeg", caption: "Hands-on Learning" },
     ],
   },
+  {
+    id: "investiture-ceremony",
+    title: "Grand Investiture Ceremony",
+    subtitle: "Empowering the leaders of tomorrow",
+    accentColor: "#8b5cf6",
+    cards: [
+      { id: "investiture-1", imageSrc: "/e.jpeg", caption: "Investiture Ceremony" },
+      { id: "investiture-2", imageSrc: "/inv.jpeg", caption: "Grand Investiture" },
+    ],
+  },
 ];

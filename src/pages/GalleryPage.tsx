@@ -51,6 +51,18 @@ export default function GalleryPage() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
+  // ── Handle reaching the bottom of the page ─────────────────────────
+  useEffect(() => {
+    const handleScroll = () => {
+      // If we are at the very bottom of the page (within 10px to account for rounding)
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+        setActiveCategoryId(galleryCategories[galleryCategories.length - 1].id);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <Navbar />

@@ -17,8 +17,9 @@ const fadeUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
-// How many duplicate sets to create for a seamless loop
-const LOOP_SETS = 3;
+// Ensure we have enough duplicate sets for a seamless loop even with few cards (e.g. 2 cards)
+// Minimum 12 cards total ensures it covers most ultra-wide screens.
+const MIN_CARDS_TOTAL = 12;
 
 export default function GallerySection({ category, index }: Props) {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,6 +28,9 @@ export default function GallerySection({ category, index }: Props) {
   // Alternate section backgrounds for visual rhythm
   const isEven = index % 2 === 0;
   const sectionBg = isEven ? "#FAF9F6" : "#F3F4F6";
+
+  // Dynamic loop calculation: Ensure at least MIN_CARDS_TOTAL for a seamless loop
+  const LOOP_SETS = Math.max(3, Math.ceil(MIN_CARDS_TOTAL / Math.max(1, category.cards.length)));
 
   // Duplicate cards for a seamless infinite loop
   const loopedCards = Array.from({ length: LOOP_SETS }, () => category.cards).flat();
