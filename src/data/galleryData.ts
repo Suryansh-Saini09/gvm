@@ -149,4 +149,14 @@ export const galleryCategories: GalleryCategory[] = [
       { id: "investiture-2", imageSrc: "/inv.jpeg", caption: "Grand Investiture" },
     ],
   },
+  {
+    id: "special-events",
+    title: "Special Events",
+    subtitle: "Moments from PTM and Robotics",
+    accentColor: "#6366f1",
+    cards: [
+      { id: "special-1", imageSrc: "/ptm.jpeg", caption: "Parent Teacher Meeting" },
+      { id: "special-2", imageSrc: "/robo.jpeg", caption: "Robotics" },
+    ],
+  },
 ];
