@@ -159,4 +159,17 @@ export const galleryCategories: GalleryCategory[] = [
       { id: "special-2", imageSrc: "/robo.jpeg", caption: "Robotics" },
     ],
   },
+  {
+    id: "janmashtami",
+    title: "Janmashtami",
+    subtitle: "Joyous celebration of Lord Krishna's birth filled with devotion and cultural performances",
+    accentColor: "#f59e0b",
+    cards: [
+      { id: "janmashtami-1", imageSrc: "/janmashtami/j1.jpeg", caption: "Janmashtami Celebration" },
+      { id: "janmashtami-2", imageSrc: "/janmashtami/j2.jpeg", caption: "Cultural Performances" },
+      { id: "janmashtami-3", imageSrc: "/janmashtami/j5.jpeg", caption: "Festive Joy" },
+      { id: "janmashtami-4", imageSrc: "/janmashtami/pp.jpeg", caption: "Little Krishna & Radha" },
+    ],
+  },
 ];
+
