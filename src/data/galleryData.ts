@@ -171,5 +171,15 @@ export const galleryCategories: GalleryCategory[] = [
       { id: "janmashtami-4", imageSrc: "/janmashtami/pp.jpeg", caption: "Little Krishna & Radha" },
     ],
   },
+  {
+    id: "ganesh-chaturthi",
+    title: "Ganesh Chaturthi",
+    subtitle: "Sacred celebrations and festive harmony during Ganesh Chaturthi",
+    accentColor: "#eab308",
+    cards: [
+      { id: "ganesh-chaturthi-1", imageSrc: "/ganesh-chaturthi/gc1.jpeg", caption: "Ganesh Chaturthi Celebration" },
+    ],
+  },
 ];
+
 
